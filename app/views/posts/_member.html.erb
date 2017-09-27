@@ -1,0 +1,26 @@
+
+
+  <% if current_user.state_group_id == -1 || current_user.state_group_id == nil%>
+  <% else%>
+    <h3>
+      <%= link_to 'Member', members_show_path  ,class: "memberlink"%>
+    </h3>
+
+    <ul >
+      <% @group = Group.where("id = ?", current_user.state_group_id).first %>
+      <% @master = User.where("id = ?", @group.master_id).first %>
+
+      <li style = list-style:circle >
+        <p><%= link_to @master.username, "/users/#{@group.master_id}",class: "linkline4" %></p>
+      </li>
+
+
+      <% @member = Member.where("group_id = ?", current_user.state_group_id).where("p = ?", 1 ) %>
+      <% @member.each do |p|%>
+      <li style = list-style:circle>
+        <% @user = User.where("id = ?", p.user_id).first %>
+        <p><%= link_to @user.username, "/users/#{p.user_id}",class: "linkline" %></p>
+      </li>
+      <% end%>
+    </ul>
+  <%end%>

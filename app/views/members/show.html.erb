@@ -1,0 +1,21 @@
+<section class = "column">
+  <div class = "titleposi">
+  <h1>
+     Member
+  </h1>
+</div>
+  <ul>
+    <% @group = Group.where("id = ?", current_user.state_group_id).first %>
+    <li style = list-style:circle>
+      <h3><%= link_to @group.master_name, "/users/#{@group.master_id}" ,class: "linkline4"%></h3>
+    </li>
+    <% @member = Member.where("group_id = ?", current_user.state_group_id).where("p = ?", 1 ) %>
+    <% @member.each do |p|%>
+    <li style = list-style:circle>
+      <h3><%= link_to p.user_name, "/users/#{p.user_id}" ,class: "linkline"%></h3>
+    </li>
+    <% end%>
+  </ul>
+
+</div>
+</section>

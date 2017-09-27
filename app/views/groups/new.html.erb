@@ -1,0 +1,18 @@
+<section class = "column">
+  <div class = "titleposi">
+  <h1>新規団体作成</h1>
+</div>
+  <%= form_for Group.new do |f| %>
+  <p>
+    <%= f.text_field :name, placeholder: 'Group Name' %>
+    <% if flash[:name_error] %>
+      <font color="red"><%= flash[:name_error]%></font>
+    <% end %>
+  </p>
+
+  <p><%= f.text_area :about, :placeholder => "About Group"%></p>
+
+  <%= f.submit :value => "作成する" %>
+  <% end %>
+  <br/>
+</section>

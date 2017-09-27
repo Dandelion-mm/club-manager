@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<!-- header -->
+  <head>
+    <title>Club Manager</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+<!-- body -->
+  <body>
+<!--edit -->
+
+<!--edit-->
+    <!-- header -->
+    <%= render "posts/header"%>
+
+    <div class = "outline">
+      <div class = "pagebody">
+        <!-- main -->
+        <% if (current_user != nil)%>
+        <div class = "pagebodymain">
+          <!--<section class = "column">-->
+        <%= yield %>
+      <!--</section>-->
+      </div>
+
+        <!-- bodysub -->
+        <div class = "pagebodysub">
+
+          <%= render "posts/profile"%>
+	  <% if current_user.state_group_id != -1 %>
+          <%= render "posts/calendar"%>
+	  <% end %>
+
+        </div>
+        <%else%>
+        <%= yield %>
+        <% end %>
+        <!-- footer -->
+        <%= render "posts/footer"%>
+      </div>
+    </div>
+  </body>
+
+</html>

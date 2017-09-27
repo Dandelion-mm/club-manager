@@ -1,0 +1,61 @@
+<div class = "header-fixed">
+  <div class = "header-bk">
+
+    <!-- ログイン状態の表示部分 -->
+
+    <% if (current_user != nil)%>
+      <div class = "statelog">
+      <% if current_user.state_group_id != -1 then %>
+      <% @group = Group.where("id = ?", current_user.state_group_id).first %>
+      <% if @group != nil then %>
+             <%= @group.name %>にログイン中
+            <% else %>
+            <% end %>
+        <% end %>
+      </div>
+
+    <%end%>
+    <div class = "header_body">
+
+      <% if (current_user != nil)%>
+
+
+      <div class = "logo_posi">
+        <div class= "titlelogo">
+          <% if (current_user.state_group_id != -1) %>
+            <%= link_to image_tag('logo.png', class: 'logo'), posts_path %>
+          <% else %>
+            <%= link_to image_tag('logo.png', class: 'logo'), root_path %>
+          <% end %>
+        </div>
+      </div>
+
+      <div class = "menu _posi">
+        <ul class = "h_menu">
+          <% if (current_user.state_group_id != -1) %>
+            <li><%= link_to "Home",posts_path%></li>
+            <li><%= link_to "Clublist",root_path%></li>
+            <li><%= link_to "Calendar","/events/calender/0"%></li>
+            <li><%= link_to "Myclub", "/posts/club_list" %></li>
+          <% else %>
+            <li><%= link_to "Clublist",root_path%></li>
+            <li><%= link_to "Calendar","/events/calender/0"%></li>
+            <li><%= link_to "Myclub", "/posts/club_list" %></li>
+          <% end%>
+        </ul>
+      </div>
+
+
+
+      <%else%>
+
+      <div class = "Hlogo_posi">
+        <div class= "titlelogo">
+          <%= link_to image_tag('logo.png', class: 'logo'), posts_path %>
+        </div>
+      </div>
+
+      <%end%>
+    </div>
+  </div>
+</div>

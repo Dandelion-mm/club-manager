@@ -1,0 +1,68 @@
+<%= link_to 'EXIT', '/events/exit' ,class: "logout"%>
+
+<section class = "column">
+
+<% @group = Group.where("id = ?", current_user.state_group_id).first %>
+<div class = "titleposi">
+  <h1><%= @group.name %></h1>
+</div>
+
+
+  <h3>
+    Information
+  </h3>
+
+  <%= form_tag posts_path, :method => 'get' do %>
+    <p>
+      <%= text_field_tag :search , @tmp %>
+      <%= submit_tag "Search", :name => nil %>
+    </p>
+  <% end %>
+
+  <%= link_to 'Add New!', new_post_path, class: "link_btn"%>
+  <div class = "box_scrollbar">
+      <p>
+        <ul class = "board">
+            <% @posts.each do |post| %>
+            <li >
+              <%= post.updated_at.strftime('%Y/%m/%d %H:%M') %>
+              <br>
+              <font size = "5"><%= link_to post.title, post_path(post) %></font>
+            </li>
+            <% end %>
+        </ul>
+      </p>
+  </div>
+  <%= render "posts/member"%>
+
+
+<br/>
+</section>
+
+<!-- 団体への申請者の有無をお知らせ -->
+<!-- ページ移動の際にタイムラグなどの若干のバグあり -->
+<!-------------------------------------->
+
+<% if current_user.id != -1 %>
+  <% if request.referer == "http://192.168.20.229:3000/groups/out_top/#{current_user.state_group_id}" %>
+
+    <% @group = Group.where("id = ?", current_user.state_group_id).first %>
+    <% if @group.master_id == current_user.id %>
+
+      <% @member = Member.where("group_id = ?", current_user.state_group_id).where("p = ?", 0) %>
+      <% @i = 0 %>
+      <% @member.each do |m| %>
+        <% @i = @i + 1 %>
+      <% end %>
+      <% if @i != 0 %>
+        <script type="text/javascript">
+          alert("管理者様へ" + "\n" + "団体への参加申請が届いています");
+        </script>
+      <% end %>
+
+    <% end %>
+
+  <% end %>
+<% end %>
+
+<!-------------------------------------->

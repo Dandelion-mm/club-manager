@@ -1,0 +1,630 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ body {
+
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   font-size: 14px;
+   background-color: #f5f5f5;
+
+ }
+
+.header-fixed{
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 110px;
+}
+
+.header-bk{
+  padding: 10px 0 20px;
+  width: 100%;
+  height: 110px;
+  background-color: rgba(240,248,255,0.8);
+  border-bottom: 1px solid #a9a9a9
+}
+
+
+.header_body{
+  margin: auto;
+  height: 100%;
+  width: 800px;
+
+}
+.statelog{
+  float: right;
+  color: deeppink;
+}
+.logo {
+  width: 298px;
+  height: 120px;
+
+}
+.logo_posi{
+  width: 298px;
+  float: left;
+  margin-top: 0px;
+
+
+　
+}
+.Hlogo_posi{
+  width: 100%;
+  margin-top: 0px;
+
+　
+}
+.titlelogo{
+  width: 298px;
+  height: 120px;
+  margin: auto;
+
+
+}
+ul.h_menu{
+  float: right;
+
+  padding: 5px 0;
+  text-align: center;
+  margin-top: 50px;
+
+
+}
+
+ul.h_menu li {
+  display: inline;
+  display: -moz-inline-box;
+  margin-left: 10px;
+  padding-left: 10px;
+  /*border-left: 1px solid #666;*/
+
+}
+
+ul.h_menu li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+
+}
+ul.h_menu li a{
+  font-size: 15px;
+
+  font-family: "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+ul.h_menu li a:hover{
+  color: skyblue;
+  /*border-bottom: 3px solid skyblue;*/
+}
+
+.menu_posi{
+  width: 100%;
+  margin-top: 100px;
+
+}
+
+
+
+.login{
+  width: 298px;
+  margin: auto;
+  padding: 0.2em 0.5em;
+  background: #ffe4d5;
+  box-shadow: 0px 0px 0px 10px #ffe4d5;
+  border: dashed 2px white;
+
+}
+
+.outline{
+  margin-top: 170px;
+
+}
+
+.titleposi{
+  text-align: center;
+  border-bottom: solid 3px pink;
+  position: relative;
+
+}
+.titleposi:after{
+  position: absolute;
+  content: " ";
+  display: block;
+  border-bottom: solid 3px deeppink;
+  bottom: -3px;
+  width: 20%;
+}
+.pagebody{
+  margin: auto;
+  width: 1100px;
+}
+
+.contents{
+  width: 400px;
+  margin: auto;
+  padding: 0.2em 0.5em;
+  background: #ffe4d5;
+  box-shadow: 0px 0px 0px 10px #ffe4d5;
+  border: dashed 2px white;
+}
+
+.pagebodymain{
+  width: 700px;
+  float: left;
+  padding: 0.2em 0.5em;
+  background: #ffe4d5;
+  box-shadow: 0px 0px 0px 10px #ffe4d5;
+  border: dashed 2px white;
+}
+
+.pagebodymain p{
+  .margin: 0;
+  padding: 0;
+}
+.column{
+  width: 400px;
+  margin: auto;
+
+}
+.box_scrollbar {
+  overflow:auto;
+  width:400px;
+  height:260px;
+  padding: 0px;
+
+}
+.li_box_scrollbar {
+  overflow:auto;
+  width:400px;
+  height:650px;
+  padding: 0px;
+
+}
+ul.board{
+ top: 0px;
+ counter-reset: list;
+ list-style-type:none;
+ font: 14px/1.6 'Mv Boli', 'arial narrow', sans-serif;
+ padding: 1.2em;
+ background:#F2EFE7 ;
+ -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
+ -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
+ box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
+
+}
+/*ul.board:after{
+ content:"list-information";
+ position: absolute;
+ bottom: 8px;
+ right: 1.2em;
+ font-size:12px;
+ color:#bbb;
+}*/
+ul.board li{
+
+ padding: 0px 10px 5px 10px;
+ margin: 7px 0 10px 0px;
+ font-weight: bold;
+ font-size:14px;
+ border-bottom:dashed 1px #ccc;
+
+}
+
+ul.board li a{
+  color: black;
+  text-decoration: none;
+}
+ul.board li a:hover{
+  color: darkgray;
+}
+
+
+
+
+.pagebodysub{
+  float: right;
+  width: 350px;
+  background-color: #ffffff;
+}
+
+.cross_line{
+    display: inline-block;
+    position: relative;
+    padding: 0.25em 1em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+.cross_line:before, .cross_line:after{
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+  transition: .3s;
+}
+.cross_line:before {left: 7px;}
+.cross_line:after {right: 7px;}
+.cross_line:hover:before{
+  top: 0px;
+  left:0;
+  height: 100%;
+}
+.cross_line:hover:after{
+  top: 0px;
+  right: 0;
+  height: 100%;
+}
+
+.logout{
+  font-family: sans-serif;
+  float: right;
+  display: inline-block;
+  padding: 0.3em 10px;
+  text-decoration: none;
+  color: deeppink;
+  border: solid 2px deeppink;
+  border-radius: 3px;
+  transition: .4s;
+}
+.logout:hover{
+  background: deeppink;
+  color: white;
+}
+
+.link_btn{
+  float: right;
+  font-weight: bold;/*太字に*/
+  text-decoration: none;/*下線消す*/
+  background: skyblue;/*背景を水色に*/
+  color:white;/*文字を白に*/
+  padding:0px 10px;/*内側の余白*/
+  border-radius: 20px;/*角を丸くする*/
+  font-family: 'Avenir','Arial';
+}
+.link_btn:hover {
+  background: silver;/*背景色をシルバーに*/
+  text-decoration: none;/*下線を消す*/
+}
+
+
+.profile{
+  padding: 0 120px 0 127px;
+
+}
+.calender{
+  margin-left: 305px;
+  width: 1300px;
+  padding: 0.2em 0.5em;
+  background: #ffe4d5;
+  box-shadow: 0px 0px 0px 10px #ffe4d5;
+  border: dashed 2px white;
+
+
+}
+.edit_b{
+  width: 20px;
+  height: 20px;
+}
+.edit_bb{
+  width: 20px;
+  height: 20px;
+}
+
+.dropposi{
+
+  float: right;
+  width: 110px;
+
+}
+.dropmenu{
+  *zoom: 1;
+  list-style-type: none;
+  width: 90px;
+  /*margin: 5px auto 30px;*/
+  padding: 0;
+
+}
+.dropmenu:before,.dropmenu:after{
+  content: "";
+  display: table;
+}
+.dropmenu:after{
+  clear: both;
+}
+.dropmenu li{
+  position: relative;
+  width: 100%;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.dropmenu li a{
+  display: block;
+  margin: 0;
+  padding: 15px 0 11px;
+
+  color: darkgray;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+}
+.dropmenu li ul{
+  list-style: none;
+  position: absolute;
+  z-index: 9999;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.dropmenu li ul li{
+  width: 100%;
+}
+.dropmenu li ul li a{
+  padding: 13px 15px;
+  border-top: 1px solid skyblue;
+  background: rgba(255,255,255,0);
+  text-align: left;
+}
+.dropmenu li:hover > a{
+  background: rgba(255,255,255,0);
+}
+.dropmenu li a:hover{
+  background: rgba(255,255,255,0);
+  color: skyblue;
+}
+
+
+#fade-in2 li ul{
+  opacity: 0;
+  top: 50%;
+  visibility: hidden;
+  transition: .5s;
+}
+#fade-in2 li:hover ul{
+  top: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+#left-to-right ul{
+  overflow: hidden;
+  width: 0;
+  transition: .5s;
+}
+#left-to-right li:hover ul{
+  width: 100%;
+}
+#left-to-right li:hover ul li a{
+  white-space: nowrap;
+}
+
+
+#flip2 li ul {
+visibility: hidden;
+perspective: 400px;
+}
+#flip2 li:hover ul{
+visibility: visible;
+}
+#flip2 ul li{
+transform: rotateY(90deg);
+transform-origin: 50% 0;
+transition: .3s;
+}
+#flip2 li:hover li{
+transform: rotateY(0);
+}
+#flip2 ul li:nth-child(2) {
+transition-delay: .1s;
+}
+#flip2 ul li:nth-child(3) {
+transition-delay: .2s;
+}
+#flip2 ul li:nth-child(4) {
+transition-delay: .3s;
+}
+#flip2 ul li:nth-child(5) {
+transition-delay: .4s;
+}
+
+.apio {
+  width: 100px;
+  height: 100px;
+}
+
+.center{
+  text-align: center;
+}
+ul.linklist{
+  list-style-type: circle;
+}
+ul.linklist li a{
+  color: black;
+  text-decoration: none;
+
+
+}
+ul.linklist li a:hover{
+  color: darkgray;
+
+}
+.prolink{
+  color: dimgray;
+  text-decoration: none;
+}
+
+.memberlink{
+  color: black;
+  text-decoration: none;
+}
+
+.linkline{
+
+  color: black;
+  text-decoration: none;
+}
+.linkline:hover{
+  color: darkgray;
+}
+
+.linkline2{
+
+  color: red;
+  text-decoration: none;
+}
+.linkline2:hover{
+  color: darkgray;
+}
+.linkline3{
+
+  color: blue;
+  text-decoration: none;
+}
+.linkline3:hover{
+  color: darkgray;
+}
+.linkline4{
+
+  color: darkorange;
+  text-decoration: none;
+}
+.linkline4:hover{
+  color: darkgray;
+}
+
+.statecolor{
+  color: deeppink;
+}
+.statecolor{
+  color: deeppink;
+  text-decoration: none;
+}
+.statecolor:hover{
+  color: darkgray;
+}
+ul.menu{
+  margin: 50px 0px;
+  padding: 5px 0;
+  text-align: center;
+
+  /*border: 1px solid #999;*/
+}
+
+ul.menu li {
+  display: inline;
+  margin-left: 5px;
+  padding-left: 10px;
+  /*border-left: 1px solid #666;*/
+
+}
+
+ul.menu li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: 0;
+
+}
+.button{
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: #000;
+    transition: .4s;
+}
+.button:hover {
+    color:#ff7f7f;
+}
+.button:before,.button:after{
+  position: absolute;
+  top: 0;
+  content:'';
+  width: 8px;
+  height: 100%;
+  display: inline-block;
+}
+.button:before{
+  border-left: solid 1px #ff7f7f;
+  border-top: solid 1px #ff7f7f;
+  border-bottom: solid 1px #ff7f7f;
+  left: 0;
+}
+.button:after{
+  content: '';
+  border-top: solid 1px #ff7f7f;
+  border-right: solid 1px #ff7f7f;
+  border-bottom: solid 1px #ff7f7f;
+  right: 0;
+}
+
+
+h1 {
+  font-size: 32px;
+  color: dimgray;
+  font-family: sans-serif;
+}
+
+h2 {
+  font-size: 18px;
+  font-family: sans-serif;
+
+}
+h3 {
+  font-size: 25px;
+}
+ul > li {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+input[type="text"],textarea {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 5px;
+}
+
+textarea {
+  height: 160px;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: bold;
+  color: tomato;
+}
+
+.command {
+  font-size: 12px;
+  float: right;
+}
+.right{
+  float: right;
+}
